@@ -1,0 +1,11 @@
+.country {
+    margin-top: 2rem;
+    padding: 1.8rem;
+    color: #fff;
+    background-color: rgb(41, 43, 141);
+}
+
+.country__item {
+    margin-bottom: 0.6rem;
+    font-size: 1.6rem;
+}

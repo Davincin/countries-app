@@ -1,0 +1,16 @@
+.country-link {
+    padding: 2rem;
+    background-color: rgb(74, 76, 204);
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: rgb(240, 240, 240);
+    border-bottom: 1px solid gray;
+    margin-bottom: 1rem;
+    width: 80%;
+    max-width: 60rem;
+    transition: background-color .3s;
+}
+
+.country-link:hover {
+    background-color: rgb(41, 43, 141);
+}

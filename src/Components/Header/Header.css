@@ -1,0 +1,25 @@
+.header {
+    position: relative;
+    padding: 3rem 0;
+    background-image: url('../../assets/images/world.jpg');
+    background-position: center;
+    background-size: cover;
+    z-index: 2;
+}
+
+.header__title {
+    font-size: 3rem;
+    font-style: italic;
+    color: #fff;
+    z-index: 5;
+}
+
+.hero-shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .7);
+    z-index: -2;
+}

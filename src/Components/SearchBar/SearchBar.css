@@ -1,0 +1,17 @@
+.searchbar {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    padding: 2rem;
+    margin-top: 3rem;
+    
+}
+
+.searchbar__input, .searchbar__label {
+    font-size: 1.6rem;
+    margin-left: 1.6rem;
+    max-width: 90%;
+    margin-bottom: 1rem;
+    
+}
