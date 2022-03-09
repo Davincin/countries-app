@@ -1,17 +1,23 @@
 import './Country.css'
 
-const Country = props => {
+interface Props {
+    name: string,
+    code: string,
+    emoji: string,
+    languages: string[]
+}
+
+const Country: React.FC<Props> = ({name, code, emoji, languages}) => {
     
-    const {name, code, emoji, languages} = props;
-    const sep = languages.length > 1 ? ", " : ""
-    const language = languages.length > 1 ? "Języki" : "Język"
+    const sep: string = languages.length > 1 ? ", " : ""
+    const language: string = languages.length > 1 ? "Języki" : "Język"
 
     return (
         <div className="country">
             <p className="country__item">Nazwa: {name}</p>
             <p className="country__item">Kod: {code}</p>
             <p className="country__item">Emoji: {emoji}</p>
-            <p className="country__item">{language}: {props.languages.map(x => {
+            <p className="country__item">{language}: {languages.map((x: any) => {
                 if(languages.indexOf(x) === languages.length -1) {
                     return x.name
                 } else {

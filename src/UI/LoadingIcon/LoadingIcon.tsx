@@ -1,6 +1,6 @@
 import './LoadingIcon.css'
 
-const LoadingIcon = () => {
+const LoadingIcon: React.FC = () => {
     return (
         <div className="lds-dual-ring"></div>
     );

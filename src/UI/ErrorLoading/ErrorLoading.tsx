@@ -1,6 +1,6 @@
 import './ErrorLoading.css'
 
-const ErrorLoading = () => {
+const ErrorLoading: React.FC = () => {
     return (
         <div className="error-loading">
             <h2 className="error-loading__title">Błąd ładowania</h2>

@@ -1,6 +1,12 @@
+import React from 'react';
 import './SearchBar.css'
 
-const SearchBar = props => {
+interface Props {
+    value: string,
+    onSearch: (e: React.ChangeEvent<HTMLInputElement>) => void
+}
+
+const SearchBar: React.FC<Props> = ({value, onSearch}) => {
     
     return (
         <div className="searchbar">
@@ -9,8 +15,8 @@ const SearchBar = props => {
             name="searchbar"
             className="searchbar__input"
             type="text"
-            value={props.value}
-            onChange={e => props.onSearch(e)}
+            value={value}
+            onChange={onSearch}
         />
         </div>
     );

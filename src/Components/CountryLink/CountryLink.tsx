@@ -1,9 +1,12 @@
 import { Link } from "react-router-dom";
 import './CountryLink.css'
 
-const CountryLink = props => {
-    
-    const {code, name} = props;
+interface Props {
+    name: string,
+    code: string
+}
+
+const CountryLink: React.FC<Props> = ({name, code}) => {
     
     return (
         <Link className="country-link" to={`/${code.toLowerCase()}`}>

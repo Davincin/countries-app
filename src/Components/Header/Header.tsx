@@ -1,6 +1,6 @@
 import './Header.css'
 
-const Header = () => {
+const Header: React.FC = () => {
     return (
         <header className="header">
             <div className="hero-shadow"></div>
