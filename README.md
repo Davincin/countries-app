@@ -1,4 +1,4 @@
-Quick strat:
+Quick start:
 
 -> download repo
 
