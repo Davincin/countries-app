@@ -9,8 +9,8 @@
 
 .header__title {
     font-size: 3rem;
-    font-style: italic;
     color: #fff;
+    font-style: italic;
     z-index: 5;
 }
 

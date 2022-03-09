@@ -1,6 +1,6 @@
 import SearchBar from "../../Components/SearchBar/SearchBar";
 import CountryLink from "../../Components/CountryLink/CountryLink";
-import { ApolloProvider, useQuery, gql} from "@apollo/client";
+import { useQuery, gql} from "@apollo/client";
 import React, { useState, useEffect } from "react";
 import client from "../../Helpers/client";
 import LoadingIcon from "../../UI/LoadingIcon/LoadingIcon";
@@ -28,12 +28,12 @@ const Home: React.FC = () => {
     const {data, loading, error} = useQuery(LIST_COUNTRIES, {client});
     const [countries, setCountries] = useState<any | null>(null);
     const [continent, setContinent] = useState<string>("");
-    const [search, setSearch] = useState<string>("")
+    const [search, setSearch] = useState<string>("");
 
     const handleSearchBar = (e: any) => {
         
         const term: string = e.target.value;
-        setSearch(e.target.value)
+        setSearch(e.target.value);
 
         if (continent) {
                 const newCountries = [...data.countries].filter(x => (x.name.toLowerCase().includes(term.toLowerCase()) && x.continent.code === continent));
@@ -41,41 +41,31 @@ const Home: React.FC = () => {
 
         } else {
                 const newCountries = [...data.countries].filter(x => x.name.toLowerCase().includes(term.toLowerCase()));
-                setCountries(newCountries)
-        }
-        
-        
-        
-    }
+                setCountries(newCountries);
+        };
+    };
 
     const changeSelectHandler = (e: any) => {
         
         if (e.value) {
             const newCountries = [...data.countries].filter(x => x.continent.code === e.value)
-            setCountries(newCountries)
+            setCountries(newCountries);
         } else {
-            setCountries([...data.countries])
-        }
+            setCountries([...data.countries]);
+        };
         
-        
-        setContinent(e.value)
-        setSearch('')
-        
-        
-    }
+        setContinent(e.value);
+        setSearch('');
+    };
 
     const fetchCountries = () => {
         if(!loading && data) {
-            setCountries([...data.countries])
+            setCountries([...data.countries]);
         }    
-    } 
-      
+    }; 
       
       useEffect(() => {
-        fetchCountries()
-        // setCountries(...data)
-        
-        
+        fetchCountries();
      }, [data])
 
     return (
@@ -93,6 +83,6 @@ const Home: React.FC = () => {
             </div>
         </div>
     );
-}
+};
  
 export default Home;

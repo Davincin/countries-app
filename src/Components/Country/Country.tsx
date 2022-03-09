@@ -5,12 +5,12 @@ interface Props {
     code: string,
     emoji: string,
     languages: string[]
-}
+};
 
 const Country: React.FC<Props> = ({name, code, emoji, languages}) => {
     
-    const sep: string = languages.length > 1 ? ", " : ""
-    const language: string = languages.length > 1 ? "Języki" : "Język"
+    const sep: string = languages.length > 1 ? ", " : "";
+    const language: string = languages.length > 1 ? "Języki" : "Język";
 
     return (
         <div className="country">

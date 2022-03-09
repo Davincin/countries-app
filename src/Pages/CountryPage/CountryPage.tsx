@@ -1,4 +1,4 @@
-import { ApolloProvider, useQuery, gql} from "@apollo/client";
+import { useQuery, gql} from "@apollo/client";
 import { useLocation } from "react-router";
 import client from "../../Helpers/client";
 import Country from "../../Components/Country/Country";

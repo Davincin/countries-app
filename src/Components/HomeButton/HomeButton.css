@@ -1,10 +1,10 @@
 .home-button {
     margin-top: 3rem;
+    padding: 1.2rem 2rem;
     font-size: 1.3rem;
+    color: #fff;
     text-decoration: none;
     background-color: royalblue;
-    color: #fff;
-    padding: 1.2rem 2rem;
     transition: background-color .3s;
 }
 
